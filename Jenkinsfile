@@ -5,7 +5,6 @@ def workerNode = "devel10"
 pipeline {
 	agent {label workerNode}
 	environment {
-		GITLAB_PRIVATE_TOKEN = credentials("metascrum-gitlab-api-token")
 		DOCKER_TAG="${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
 	}
 	options {
@@ -34,6 +33,7 @@ pipeline {
 			steps {
 				script {
 					docker.image("docker.dbc.dk/simplesftpserver:${DOCKER_TAG}").push()
+					docker.image("docker.dbc.dk/simplesftpserver:${DOCKER_TAG}").push("latest")
 				}
 			}
 		}
