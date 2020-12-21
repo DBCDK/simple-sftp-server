@@ -5,3 +5,10 @@ docker build -t docker.dbc.dk/simplesftpserver:devel .
 if [[ ! -z "$BUILD_NUMBER" ]]; then
     docker tag docker.dbc.dk/simplesftpserver:devel docker.dbc.dk/simplesftpserver:${BRANCH_NAME}-${BUILD_NUMBER}
 fi
+
+cd ../socks5proxy
+echo "Building simple socks5proxy for integration tests."
+docker build -t docker.dbc.dk/socks5proxy:devel .
+if [[ ! -z "$BUILD_NUMBER" ]]; then
+    docker tag docker.dbc.dk/socks5proxy:devel docker.dbc.dk/socks5proxy:${BRANCH_NAME}-${BUILD_NUMBER}
+fi
