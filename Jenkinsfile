@@ -34,6 +34,8 @@ pipeline {
 				script {
 					docker.image("docker.dbc.dk/simplesftpserver:${DOCKER_TAG}").push()
 					docker.image("docker.dbc.dk/simplesftpserver:${DOCKER_TAG}").push("latest")
+					docker.image("docker.dbc.dk/socks5proxy:${DOCKER_TAG}").push()
+					docker.image("docker.dbc.dk/socks5proxy:${DOCKER_TAG}").push("latest")
 				}
 			}
 		}
