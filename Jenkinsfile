@@ -32,10 +32,10 @@ pipeline {
             }
 			steps {
 				script {
-					docker.image("docker.dbc.dk/simplesftpserver:${DOCKER_TAG}").push()
-					docker.image("docker.dbc.dk/simplesftpserver:${DOCKER_TAG}").push("latest")
-					docker.image("docker.dbc.dk/socks5proxy:${DOCKER_TAG}").push()
-					docker.image("docker.dbc.dk/socks5proxy:${DOCKER_TAG}").push("latest")
+					docker.image("docker-dbc.artifacts.dbccloud.dk/simplesftpserver:${DOCKER_TAG}").push()
+					docker.image("docker-dbc.artifacts.dbccloud.dk/simplesftpserver:${DOCKER_TAG}").push("latest")
+					docker.image("docker-dbc.artifacts.dbccloud.dk/socks5proxy:${DOCKER_TAG}").push()
+					docker.image("docker-dbc.artifacts.dbccloud.dk/socks5proxy:${DOCKER_TAG}").push("latest")
 				}
 			}
 		}

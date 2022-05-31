@@ -9,6 +9,6 @@ Both are meant to be used for integration testing sftp services.
 
 They can be found in artifactory here:
 ```
-docker.dbc.dk/simplesftpserver:latest
-docker.dbc.dk/socks5proxy:latest
+docker-dbc.artifacts.dbccloud.dk/simplesftpserver:latest
+docker-dbc.artifacts.dbccloud.dk/socks5proxy:latest
 ```

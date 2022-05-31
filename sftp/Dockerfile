@@ -1,4 +1,4 @@
-FROM docker.dbc.dk/dbc-buster:latest
+FROM docker-dbc.artifacts.dbccloud.dk/dbc-buster:latest
 LABEL maintainer=meta-scrum@dbc.dk
 
 # Steps done in one RUN layer:

@@ -1,5 +1,6 @@
-FROM docker.dbc.dk/dbc-buster:latest
-MAINTAINER jbr@dbc.dk
+FROM docker-dbc.artifacts.dbccloud.dk/dbc-buster:latest
+LABEL maintainer=meta-scrum@dbc.dk
+
 ENV USERNAME=socksproxy
 ENV PASSWORD=socksproxy
 
